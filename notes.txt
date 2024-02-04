@@ -1,0 +1,73 @@
+
+humein laravel jetstram ka forgot paswword or registrarion pages ko edit krna hai or apna banana hai
+user kay dashboard pay kaam krna hai..
+or user ka home page pay animations and bohot kuch lagana hai link yerhi yaha se dekh kay lagana hai 
+link: https://fitnessfactorymaine.com/
+
+Acha abhi kal tak kay liye kya kya krna hai
+
+=>Trainer kay form mein required laanay hai--
+=>traniner jaha fecth horha hai waha ka ui sahi or table sahi krna hai or edit or delete kay pyaaray button laganay hai--
+=>update ka kaam chatgpt mein dalna hai--
+=>Trainer ki Ui pyari banado
+=>Now Trainers ko also user mein fetch karana hai
+
+====================Services==========
+
+Services ka crud krna hai
+jisme i think create hogaya hai final buss
+or services ko bhi useer kay dashboard pay fetch  karana hai 
+
+
+
+====================Blog============
+
+
+blog ki blog_id
+blogger ka name (Matlab jo Admin hai uska naam because blogs sirf hum dalenge)
+blog ki headline picture
+blog ki timing
+Blog ka topic
+blog ki short Descripttion max 35 words
+Blog ki long description max 400 words
+Blog ki Category  //--multiple select options
+Blog kay captions
+
+Comment wala kaam 
+Jismein comment dalnay wala ka form banega jismein uska name**
+email*
+Website
+Message*
+lekin hamaray pass uski sari details aye kay uski id kya hai asli naam and passsword wagera
+
+
+
+Humein aik blog page bhi dalna  hai  in user dashboard
+or sirf hum blogs dal sakay or kisi or ko dalanay hoto wo phele login karay then apna blog bheje or wo 
+hamaray pass aye then hum agar approve karay to wo user dashboard par show ho sabko ho sath sath jis user ne diya hai uska naam show ho 
+or comments bhi allow ho
+comments pay  restirction wala button banaege
+jo database mein jayega
+
+=================UI(Transistions)===============
+
+Ab koshish karo kay futuristic Transistions rkho takay log attract ho 
+
+================SEO=========
+is ka to kuch krna paarega
+
+
+============Price Cards=====================
+
+ golden
+ diamond
+ bronze
+ or platinum 
+ ye walay cards bananany ji ki price services se fetch hogi
+ 
+ ==============seeders===
+ seeders seekho yawr
+ 
+
+================AAgay or sochenge to add kardege==============
+
