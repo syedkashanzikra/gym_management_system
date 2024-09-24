@@ -32,28 +32,16 @@ Route::get('/blogs', [BlogController::class,'index'])->name('blog.show');
 Route::get('/blog/{id}', [BlogController::class,'singleblog'])->name('blog.single');
 Route::get('/why', function () {
     return view('user.whyus');
-});
+})->name('whyus');
+
 Route::get('/contact', function () {
     return view('user.contact');
-});
-// Route::get('/trainer', function () {
-//     return view('user.trainer');
-// });
+})->name('contact');
+
+
 Route::get('/trainer',[Trainercontroller::class,'showtrainerstohome'])->name('trainershow_in_public');
 
-// Route::get('/', function () {
-//     return view('home');
-// });
 
-// Route::middleware([
-//     'auth:sanctum',
-//     config('jetstream.auth_session'),
-//     'verified',
-// ])->group(function () {
-//     Route::get('/dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
-// });
 
 
 Route::middleware([

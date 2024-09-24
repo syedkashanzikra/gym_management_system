@@ -51,12 +51,12 @@
        </button>
  
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-         <ul class="navbar-nav ml-auto">
+         <ul class="ml-auto navbar-nav">
            <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
            </li>
            <li class="nav-item {{ request()->is('why') ? 'active' : '' }}">
-             <a class="nav-link" href="/why">Why us</a>
+             <a class="nav-link" href="{{route('whyus')}}">Why us</a>
            </li>
            <li class="nav-item {{ request()->is('blogs') ? 'active' : '' }}">
             <a class="nav-link" href="{{route('blog.show')}}">Blog</a>
@@ -65,10 +65,10 @@
              <a class="nav-link" href="{{ route('trainershow_in_public') }}">Trainers</a>
            </li>
            <li class="nav-item {{ request()->is('contact') ? 'active' : '' }}">
-             <a class="nav-link" href="/contact">Contact Us</a>
+             <a class="nav-link" href="{{ route('contact') }}">Contact Us</a>
            </li>
            @if (Route::has('login'))
-             <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+             <div class="z-10 p-6 text-right sm:fixed sm:top-0 sm:right-0">
                @auth
                  <li class="nav-item {{ request()->is('dashboard') ? 'active' : '' }}">
                    <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a>
@@ -107,7 +107,7 @@
             <div  class="footer bg-dark" >
                <div class="container ">
                 @if(session("Success"))
-                <div class="alert alert-success p-5 text-center">
+                <div class="p-5 text-center alert alert-success">
                   <h3 class="display-4 text-dark">We will be answering you later!</h3>
                 </div>
                @endif

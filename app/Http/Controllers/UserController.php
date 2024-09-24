@@ -5,10 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\trainers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Models\contact;
+use App\Models\Members;
 use App\Models\User;
-use Auth;
-use DB;
+
+
 use App\Models\Services;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 class UserController extends Controller
 {
     /**
@@ -17,14 +22,24 @@ class UserController extends Controller
     public function index()
     {
         $services = DB::table('services')->get();
-            if(Auth::User()->Role==0){
-                return view('dashboard', compact('services'));
-             }elseif(Auth::User()->Role==1){
-                 return view('admin.index');
-             }else{
-                 return "Invalid Role";
-             }
+        
+        if (Auth::user()->Role == 0) {
+            return view('dashboard', compact('services'));
+        } elseif (Auth::user()->Role == 1) {
+            // Count the entries for each model
+            $trainersCount = trainers::count();
+            $contactsCount = contact::count();
+            $servicesCount = Services::count();
+            $usersCount = User::count();
+            $membersCount = Members::count();
+    
+            // Pass the counts to the admin.index view
+            return view('admin.index', compact('trainersCount', 'contactsCount', 'servicesCount', 'usersCount', 'membersCount'));
+        } else {
+            return "Invalid Role";
+        }
     }
+    
 
 
 
@@ -41,7 +56,7 @@ class UserController extends Controller
         // $trainer = Trainers::all();        
         // if($trainer->['trainer_name']==$service->['service_trainer'])  {
             if(Auth::User()->Role== 0){
-                return view('user.user_service_full', compact('service'));   
+                return view('user/user_service_full', compact('service'));   
     
         }else{
             return "INVALID ROLE FOR THIS";
